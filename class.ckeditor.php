@@ -6,7 +6,7 @@
  * @version 1.1 (18.12.2014) | Fallback on CKEdit 3 for MSIE<9
  * @license LGPL 2.0
  */
-
+define("URL_TO_DIRECTORY", "http://www.url.com/confs/")
 class ckeditor {
 	public $ckeditor_pfad = "";
 	public function __construct($ckeditor_pfad = "ckeditor_basic") {
@@ -21,7 +21,7 @@ class ckeditor {
 		return '<script type="text/javascript" src="' . $this->ckeditor_pfad . '/ckeditor.js"></script>';
 	}
 	public function set_jquery_js() {
-		return '<script type="text/javascript" src="' . JA_URL . "confs/cls/CKEDITOR/" . $this->ckeditor_pfad . '/jquery-1.11.1.min.js"></script>' . '<script type="text/javascript" src="' . JA_URL . "confs/cls/CKEDITOR/" . $this->ckeditor_pfad . '/ckeditor.js"></script>' . '<script type="text/javascript" src="' . JA_URL . "confs/cls/CKEDITOR/" . $this->ckeditor_pfad . '/adapters/jquery.js"></script>';
+		return '<script type="text/javascript" src="' .URL_TO_DIRECTORY . $this->ckeditor_pfad . '/jquery-1.11.1.min.js"></script>' . '<script type="text/javascript" src="' . URL_TO_DIRECTORY . $this->ckeditor_pfad . '/ckeditor.js"></script>' . '<script type="text/javascript" src="' . URL_TO_DIRECTORY . $this->ckeditor_pfad . '/adapters/jquery.js"></script>';
 	}
 	public function ckEditor_one_by_Code($edit_id) {
 		$_str = '<script type="text/javascript">';
